@@ -7,7 +7,7 @@
 3. Run following commands:
 
 ```
-pkg install curl gnupg
-curl https://github.com/RonMobile/r-on-android/blob/master/install.sh
-sh install.sh
+pkg install curl gnupg wget
+wget https://raw.githubusercontent.com/RonMobile/r-on-android/master/install_r.sh
+sh install_r.sh
 ```

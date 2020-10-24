@@ -6,7 +6,7 @@ echo "deb https://its-pointless.github.io/files/24 termux extras" > "$PREFIX/etc
 deb https://its-pointless.github.io/files/24 termux extras
 curl "https://its-pointless.github.io/pointless.gpg" | apt-key add
 pkg update
-pkg install r-base \
+pkg install r-base  
             make \
             clang \
             gcc-9 \
@@ -22,7 +22,7 @@ pkg install r-base \
             git \
             libcairo \
             libtiff \
-            pango \
+            pango 
              
 apt-add-repository
 
@@ -31,11 +31,11 @@ cd /data/data/com.termux/files/usr/bin
 cp gfortran-9 gfortran
 
 # install LightGBM
-git clone --recursive https://github.com/microsoft/LightGBM
-cd LightGBM/
-mkdir build
-cd build
-cmake ..
-make -j4
-cd ..
-Rscript build_r.R 
+# git clone --recursive https://github.com/microsoft/LightGBM
+# cd LightGBM/
+# mkdir build
+# cd build
+# cmake ..
+# make -j4
+# cd ..
+# Rscript build_r.R 
