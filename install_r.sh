@@ -1,28 +1,13 @@
 #!/bin/sh 
 
+pkg -y up
 mkdir -p $PREFIX/etc/apt/sources.list.d/
 echo "deb https://its-pointless.github.io/files/24 termux extras" > "$PREFIX/etc/apt/sources.list.d/"
 echo "deb https://its-pointless.github.io/files/24 termux extras" > "$PREFIX/etc/apt/sources.list.d/pointless.list"
-deb https://its-pointless.github.io/files/24 termux extras
+
 curl "https://its-pointless.github.io/pointless.gpg" | apt-key add
-pkg update
-pkg install r-base  
-            make \
-            clang \
-            gcc-9 \
-            libgfortran \
-            openssl \
-            libcurl \
-            libicu \
-            libxml2 \
-            zlib-dev\
-            ndk-sysroot \
-            pkg-config \
-            cmake \
-            git \
-            libcairo \
-            libtiff \
-            pango 
+pkg -y up
+pkg -y install r-base  make clang gcc-9 libgfortran openssl libcurl libicu libxml2 zlib-dev ndk-sysroot pkg-config cmake git libcairo libtiff pango 
              
 apt-add-repository
 
