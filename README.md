@@ -1,4 +1,4 @@
-# R on Adroid
+# R on Android
 
 ## Installation
 
