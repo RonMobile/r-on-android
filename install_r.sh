@@ -10,6 +10,8 @@ cp gfortran-9 gfortran
 
 setupclang-gfort-9
 
+Rscript -e "install.packages('remotes'); remotes::install_github(c('RonMobile/fs', 'RonMobile/later', 'RonMobile/httpuv'))"
+
 # install LightGBM
 # git clone --recursive https://github.com/microsoft/LightGBM
 # cd LightGBM/
