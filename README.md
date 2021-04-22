@@ -8,6 +8,6 @@
 
 ```
 pkg install curl gnupg wget
-wget https://raw.githubusercontent.com/RonMobile/r-on-android/master/install_r.sh
+wget -N https://raw.githubusercontent.com/RonMobile/r-on-android/master/install_r.sh
 sh install_r.sh
 ```
