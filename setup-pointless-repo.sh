@@ -4,7 +4,7 @@ apt-get update
 apt-get --assume-yes upgrade
 apt-get --assume-yes install coreutils gnupg
 # Make the sources.list.d directory
-mkdir -p $PREFIX/etc/apt/sources.list.d
+yes | mkdir -p $PREFIX/etc/apt/sources.list.d
 # Write the needed source file
 if apt-cache policy | grep -q "termux.*24\|termux.org\|bintray.*24\|k51qzi5uqu5dg9vawh923wejqffxiu9bhqlze5f508msk0h7ylpac27fdgaskx" ; then
 echo "deb https://its-pointless.github.io/files/24 termux extras" > $PREFIX/etc/apt/sources.list.d/pointless.list
