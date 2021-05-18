@@ -1,8 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/sh
 # Get some needed tools. coreutils for mkdir command, gnugp for the signing key, and apt-transport-https to actually connect to the repo
 apt-get update
+echo "1. step"
 apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
-apt-get --assume-yes install coreutils gnupg
+echo "2. step"
+apt-get --assume-yes install coreutils
+echo "3. step"
 # Make the sources.list.d directory
 mkdir -p $PREFIX/etc/apt/sources.list.d
 # Write the needed source file
