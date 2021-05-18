@@ -2,7 +2,7 @@
 # Get some needed tools. coreutils for mkdir command, gnugp for the signing key, and apt-transport-https to actually connect to the repo
 apt-get update
 echo "1. step"
-apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" --assume-yes upgrade
 echo "2. step"
 apt-get --assume-yes install coreutils
 echo "3. step"
